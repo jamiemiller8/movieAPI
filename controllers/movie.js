@@ -12,5 +12,8 @@ module.exports = {
     },
     update: function(req, res) {
         Movie.findByIdAndUpdate({name: req.params.name}, req.body).then(movie => res.json(movie));
+    },
+    delete: function(req, res) {
+        Movie.findOneAndDelete({name: req.params.name}).then(movie => res.json(movie));
     }
 }
