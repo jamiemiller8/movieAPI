@@ -11,3 +11,5 @@ const MovieSchema = new Schema ({
     actors: String,
     plot: String
 })
+
+module.exports = mongoose.model('Movie', MovieSchema)
