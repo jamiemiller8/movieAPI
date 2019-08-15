@@ -15,6 +15,12 @@ axios
   .then(r => movies.push(r.data))
   .then(axios.get(url[1])
   .then(r => movies.push(r.data)))
+  .then(axios.get(url[2])
+  .then(r => movies.push(r.data)))
+  .then(axios.get(url[3])
+  .then(r => movies.push(r.data)))
+  .then(axios.get(url[4])
+  .then(r => movies.push(r.data)))
   .then(r => {
     let data = []
     let i = 0
@@ -37,3 +43,7 @@ axios
       })
       .then(r => console.log(r))
   })
+
+  //eventually going to have to map through the movie data thing in order to 
+  //seed the genre and person seed info? 
+
