@@ -22,27 +22,32 @@ axios
   .then(axios.get(url[4])
   .then(r => movies.push(r.data)))
   .then(r => {
-    let data = []
-    let i = 0
+    // let data = []
+    // let i = 0
     console.log(movies)
-    movies.forEach(movie => {
-      data[i] = {
-        title: movie.title,
-        year: movie.year,
-        actors: movie.actors,
-        plot: movie.plot
-      }
-      i++;
-    });
-    return data;
   })
-  .then(data => {
-      Movie.deleteMany()
-      .then(r => {
-          Movie.create(data)
-      })
-      .then(r => console.log(r))
-  })
+  
+
+  //   movies.forEach(movie => {
+  //     data[i] = {
+  //       title: movie.title,
+  //       year: movie.year,
+  //       actors: movie.actors,
+  //       plot: movie.plot
+  //     }
+  //     i++;
+  //   });
+  //   console.log(data)
+  //   return data;
+
+  // })
+  // .then(data => {
+  //     Movie.deleteMany()
+  //     .then(r => {
+  //         Movie.create(data)
+  //     })
+  //     .then(r => console.log(r))
+  // })
 
   //eventually going to have to map through the movie data thing in order to 
   //seed the genre and person seed info? 
