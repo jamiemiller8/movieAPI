@@ -1,7 +1,6 @@
 const Genre = require("../models/Genre");
 const Movie = require("../models/Movie");
 const Person = require("../models/Person");
-// const connection = require("connection")
 const axios = require("axios");
 const url = [
   "http://www.omdbapi.com/?i=tt0120338&apikey=6a0d2ef3",
@@ -10,7 +9,7 @@ const url = [
   "http://www.omdbapi.com/?t=avengers&apikey=6a0d2ef3",
   "http://www.omdbapi.com/?t=inception&apikey=6a0d2ef3 "
 ];
-// let connect = connection.connect;
+
 let movies = [];
 axios
   .get(url[0])
