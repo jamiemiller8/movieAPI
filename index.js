@@ -4,9 +4,9 @@ const app = express();
 
 app.use(parser.json());
 
-app.use("/genre", require("./routes/genre"));
 app.use("/movie", require("./routes/movie"));
-app.use("/person", require("./routes/person"));
+app.use("/review", require("./routes/review"));
+app.use('/rating', require("./routes/rating"));
 
 
 app.set("port", process.env.PORT || 8080);
