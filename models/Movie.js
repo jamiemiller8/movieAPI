@@ -1,18 +1,23 @@
 const mongoose = require("../db/connection");
 const Schema = mongoose.Schema;
 
+// const RatingSchema = new Schema({
+
+// })
+
 const MovieSchema = new Schema ({
-    title: String,
-    year: Number,
-    genres: [{
+    Title: String,
+    Year: String,
+    review: [{
       type: Schema.Types.ObjectId, 
-      ref: "Genre"
+      ref: "ReviewSchema"
     }],
-    actors: String,
-    plot: String
+    Actors: String,
+    Rating: [{
+      type:Schema.Types.ObjectId,
+      ref: "RatingSchema"
+    }],
+    Plot: String
 })
 
 module.exports = mongoose.model('Movie', MovieSchema)
-
-
-/// switch back to making 'genres' as a ref - remove string

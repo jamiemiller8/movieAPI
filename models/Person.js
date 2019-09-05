@@ -1,12 +1,12 @@
-const mongoose = require("../db/connection");
-const Schema = mongoose.Schema;
+// const mongoose = require("../db/connection");
+// const Schema = mongoose.Schema;
 
-const PersonSchema = new Schema ({
-    name: String,
-    movies: [{
-        type: Schema.Types.ObjectId, 
-        ref: "Movie"
-      }]
-})
+// const PersonSchema = new Schema ({
+//     Actors: String,
+//     Movies: String
+// })
 
-module.exports = mongoose.model('Person', PersonSchema)
+// module.exports = mongoose.model('Person', PersonSchema)
+
+
+//NO LONGER USING THIS MODEL
