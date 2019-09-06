@@ -6,6 +6,6 @@ if(process.env.NODE_ENV === "production") {
     mongoURI = "mongodb://localhost/movieAPI"
 }
 
-mongoose.connect(mongoURI, { useNewUrlParser: true}).catch(e => console.log(e))
+mongoose.connect(mongoURI).catch(e => console.log(e))
 
 module.exports = mongoose;
