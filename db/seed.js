@@ -85,10 +85,14 @@ Movie.deleteMany({})
     Review.deleteMany({})
       .then(
         reviews.forEach(review =>
-          review.results.forEach(result =>
-            Review.create(result)
-            .then(r => console.log(r))
-            .catch(e => console.log(e))
+          review.results.forEach(result => 
+            {
+              if (result) {
+                Review.create(result)
+                .then(r => console.log(r))
+                .catch(e => console.log(e))
+              } 
+            }
           )
         )
       )
