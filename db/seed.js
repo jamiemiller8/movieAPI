@@ -66,7 +66,7 @@
 //eventually going to have to map through the movie data thing in order to
 //seed the genre and person seed info? **************
 
-const mongoose = require("./connection");
+// const mongoose = require("./connection");
 
 const Movie = require("../models/Movie");
 let movies = require("./json-files/imdb/imdb-movies.json");
