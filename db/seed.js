@@ -79,11 +79,11 @@ const Rating = require("../models/Rating");
 
 
 Movie.deleteMany({})
-  .then(Movie.create(movies))
-  .then(console.log("finsihed seeding movies"))
-  .then(
+  .then(()=>Movie.create(movies))
+  .then(()=> console.log("finsihed seeding movies"))
+  .then(()=>
     Review.deleteMany({})
-      .then(
+      .then(()=>
         reviews.forEach(review =>
           review.results.forEach(result => 
             {
@@ -96,7 +96,7 @@ Movie.deleteMany({})
           )
         )
       )
-      .then(
+      .then(()=>
         Movie.find({}).then(movies => {
           movies.forEach(movie => {
             Review.find({'display_title': movie.Title}).then(reviews => {
@@ -107,7 +107,7 @@ Movie.deleteMany({})
               }
             })
           })
-        }))).then(
+        }))).then(()=>
           Rating.deleteMany({})
           .then(Rating.create(movies))
         )
