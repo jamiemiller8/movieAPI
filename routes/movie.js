@@ -9,6 +9,3 @@ router.put('/:title', movieController.update)
 router.delete('/:title', movieController.delete)
 
 module.exports = router
-
-
-

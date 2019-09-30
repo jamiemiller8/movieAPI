@@ -1,10 +1,6 @@
 const mongoose = require("../db/connection");
 const Schema = mongoose.Schema;
 
-// const RatingSchema = new Schema({
-
-// })
-
 const MovieSchema = new Schema ({
     Title: String,
     Year: String,
