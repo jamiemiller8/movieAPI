@@ -9,6 +9,8 @@ The [deployed API address](https://movieapi2.herokuapp.com/) also contains two e
 <br/><br/>
 Example of the review and rating endpoint results:
 <img align="center" src="https://i.imgur.com/DZxr4a6.png" width="100%" height="80%" >
+<br/><br/>
+<br/><br/>
 <img align="center" src="https://i.imgur.com/EGASWj4.png" width="100%" height="80%" >
 <br/><br/>
 
